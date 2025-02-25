@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my Bank</title>
+    <title>Welcome this Bank</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -15,15 +15,15 @@
             <nav class="flex justify-around items-center">
                 <img class="w-16" src="./assets/Group.png" alt="">
                 <div>
-                    <h1 class="text-3xl font-bold">$ 4500</h1>
+                    <h1 class="text-3xl font-bold">$ <span id="main-balance">45000</span></h1>
                     <p class="border rounded p-1">Available balance</p>
                 </div>
                 <button class="btn">Logout</button>
             </nav>
             <section class="mt-10">
                 <div class="p-2">
-                    <h1 class="text-2xl font-bold mb-2">Welcome to Payooo!</h1>
-                    <p>Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+                    <h1 class="text-2xl font-bold mb-2 text-center">Welcome to Payooo!</h1>
+                    <p class="text-center">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
                 </div>
 
                 <!-- card  -->
@@ -79,26 +79,26 @@
                                         <label class="label">
                                             <span class="label-text">Bank Account Number</span>
                                         </label>
-                                        <input value="01301301302" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+                                        <input value="01301301302" maxlength="11" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Amount to Add</span>
                                         </label>
-                                        <input type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                                        <input id="amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Pin Number</span>
                                         </label>
-                                        <input value="1234" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"
+                                        <input id="pin" value="1234" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"
                                             required />
                                         <label class="label">
                                             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                                         </label>
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button class="btn border-none btn-neutral bg-blue-700 mt-4 w-full">Add Money</button>
+                                        <button type="submit" id="add-money-btn" class="btn border-none btn-neutral bg-blue-700 mt-4 w-full">Add Money</button>
                                     </div>
                                 </form>
                             </div>
@@ -108,6 +108,8 @@
             </section>
         </header>
     </section>
+
+    <script src="./js/addMoney.js"></script>
 </body>
 
 </html>

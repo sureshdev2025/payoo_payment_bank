@@ -6,7 +6,7 @@ document.getElementById('login-btn').addEventListener('click', function(event){
     // login condition
     const pinNumber = document.getElementById('pin-number').value;
     const pin = parseInt(pinNumber);
-    console.log(typeof pin);
+    
     if(accountNumber.length === 11){
         if(pin === 1234){
             window.location.href='./main.html';
