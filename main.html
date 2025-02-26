@@ -23,18 +23,19 @@
             <section class="mt-10">
                 <div class="p-2">
                     <h1 class="text-2xl font-bold mb-2 text-center">Welcome to Payooo!</h1>
-                    <p class="text-center">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+                    <p class="text-center">Enjoy easy and convenient financial services with us. <br> Cashout charge is
+                        low and </p>
                 </div>
 
                 <!-- card  -->
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
                     <!-- card-1  -->
-                    <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <div id="add-money-box" class="box cursor-pointer border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/addMoney.png" alt="">
                         <h3>Add Money</h3>
                     </div>
                     <!-- card - 2 -->
-                    <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <div id="cashout-box" class="box cursor-pointer border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/cashOut.png" alt="">
                         <h3>Cashout</h3>
                     </div>
@@ -60,7 +61,7 @@
                     </div>
                 </div>
 
-                <section>
+                <section id="addMoney">
                     <h2>Add Money</h2>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
@@ -71,7 +72,7 @@
                                         <option disabled selected>Select Your UPI</option>
                                         <option value="PhonePe">PhonePe</option>
                                         <option value="SBI">SBI</option>
-                                        <option  value="AirtelPaymentBank">Airtel Payment Bank</option>
+                                        <option value="AirtelPaymentBank">Airtel Payment Bank</option>
                                         <option value="Paytm">Paytm</option>
                                         <option value="Gpay">Gpay</option>
                                     </select>
@@ -79,26 +80,31 @@
                                         <label class="label">
                                             <span class="label-text">Bank Account Number</span>
                                         </label>
-                                        <input value="01301301302" maxlength="11" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+                                        <input value="01301301302" maxlength="11" type="number"
+                                            placeholder="Enter 11 digit account number" class="input input-bordered"
+                                            required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Amount to Add</span>
                                         </label>
-                                        <input id="amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                                        <input id="amount" type="number" placeholder="Add Amount to withdraw"
+                                            class="input input-bordered" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Pin Number</span>
                                         </label>
-                                        <input id="pin" value="1234" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"
-                                            required />
+                                        <input id="pin" value="1234" type="text" placeholder="Enter 4 digit pin number"
+                                            class="input input-bordered" required />
                                         <label class="label">
                                             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                                         </label>
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button type="submit" id="add-money-btn" class="btn border-none btn-neutral bg-blue-700 mt-4 w-full">Add Money</button>
+                                        <button type="submit" id="add-money-btn"
+                                            class="btn border-none btn-neutral bg-blue-700 mt-4 w-full">Add
+                                            Money</button>
                                     </div>
                                 </form>
                             </div>
@@ -106,10 +112,29 @@
                     </div>
                 </section>
             </section>
+
+            <section id="cashout">
+                <h2>Cash out</h2>
+                <fieldset class="fieldset">
+                    <label class="fieldset-label">Account Number</label>
+                    <input value="01301301302" id="account-number" type="number" maxlength="11" class="input"
+                        placeholder="Enter your number" required />
+
+                    <label class="fieldset-label">Amount</label>
+                    <input id="cashout-amount" type="number" class="input" placeholder="Enter your amount" required />
+                    <label class="fieldset-label">4 Digit Pin</label>
+                    <input value="1234" id="cashout-pin" type="text" class="input" placeholder="Enter 4 Digit Pin" required />
+                    <div><a class="link link-hover">Forgot Pin?</a></div>
+                    <button id="cashout-btn" type="submit" class="btn btn-neutral bg-blue-700 mt-4">Cashout</button>
+                </fieldset>
+            </section>
         </header>
     </section>
 
+
     <script src="./js/addMoney.js"></script>
+    <script src="./js/toggle.js"></script>
+    <script src="./js/cashout.js"></script>
 </body>
 
 </html>
